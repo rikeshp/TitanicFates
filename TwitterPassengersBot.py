@@ -30,6 +30,6 @@ with open('Titanic_Passengers.txt') as csv_file:
             line_count += 1
     for i in Bios:
         api.update_status(status=i)
-        time.sleep(3600)
+        time.sleep(14400)
     #print(*Bios, sep = "\n")
     #print(f'Processed {line_count} lines.')
