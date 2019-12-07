@@ -1,5 +1,6 @@
 import csv
 import time
+import random
 import tweepy
 
 consumer_key = 'LwjoSPrxYf2soKLkgcyvQ2zDT'
@@ -28,8 +29,11 @@ with open('Titanic_Passengers.txt') as csv_file:
         else:
             Bios.append(f'\t Hi, my name is {row[4]} {row[3]} and I {row[1]} survive the Titanic.')
             line_count += 1
-    for i in Bios:
-        api.update_status(status=i)
-        time.sleep(14400)
+    #for i in Bios:
+        #api.update_status(status=i)
+        #time.sleep(14400)
+while True:
+    api.update_status(status=random.choice(Bios))
+    time.sleep(14000)
     #print(*Bios, sep = "\n")
     #print(f'Processed {line_count} lines.')
